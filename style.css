@@ -1,0 +1,19 @@
+body {
+	width: 100%;
+	max-width: 800px;
+	padding: 10px;
+	display: block;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+li {
+	margin-bottom: 10px;
+}
+.number { list-style-type: lower-latin; }
+.resp { 
+	background-color: blanchedalmond; 
+	width: 100px;
+	min-height: 20px;
+	text-align: center;
+	overflow-wrap: break-word;
+}
