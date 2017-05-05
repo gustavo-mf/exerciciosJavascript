@@ -33,23 +33,25 @@ function exercicios() {
 	let i = 0;
 	while (i < 10) {
 		i += 0.2;
-		console.log(i);
+		//console.log(i);
 	}
 	document.getElementById('4').innerHTML = i;
 
 	// exercicios 5
-	document.getElementById('5').innerHTML = '';
+
+	document.getElementById('5').innerHTML = menorNumero(78, 0);
 
 	// exercicios 6
-	document.getElementById('6').innerHTML = '';
+	document.getElementById('6').innerHTML = pow(2, 2);
 
 	// exercicios 7
-	document.getElementById('7').innerHTML = '';
+	document.getElementById('7').innerHTML = toMaiusculaPrimeira('casa');
 
 	// exercicios 8
-	document.getElementById('8').innerHTML = '';
+	document.getElementById('8').innerHTML = getMax([10,1,222,3,4]);
 
 	// exercicios 9
+
 	document.getElementById('9').innerHTML = '';
 
 }
@@ -63,6 +65,35 @@ function intervaloPares(ini, fim) {
 	return 'de: ' + ini + ' at&eacute;: ' + fim + '\n' + intervalo;
 }
 
-function menorNumero(x, y) {
-	
+let menorNumero = function (x, y) {
+	if (x < y) {
+		return x;
+	} else {
+		return y;
+	}
 }
+
+let pow = function (x, y) {
+	let soma = 1;
+	for (let i = 0; i < y; i++) {
+		soma *= x;
+	}
+	return soma;
+}
+
+let toMaiusculaPrimeira = function (s) {
+	if (s.length > 0) {
+		return s[0].toUpperCase() + s.substring(1);
+	}
+}
+
+let getMax = function (arr) {
+	let max = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if ( arr[i] > max)
+			max = arr[i];
+	}
+	return max;
+}
+
+let frequencia = function () {};
